@@ -22,14 +22,19 @@
 						<input type="text" ng-model="search" placeholder="Enter username">
 						<button class="btn btn-primary" type="submit">Search</button>
 					</form>
-					<div id="results" class="col-sm-6">
-						<div class="col-sm-6" ng-repeat="item in items">
-							
-									<h3>{{item.login}}</h3>
-									<a id="pic" ng-href="{{item.html_url}}"></a>
-									<img ng-src="{{item.avatar_url}}">
-								
-						</div>
+					<div id="results" class="col-sm-12">
+						<div class="mdl-grid">
+			            	<div style="text-align: center" ng-repeat="item in items">
+			            		<ul style="list-style: none">
+			                		<li>
+			                  			<h4>{{item.login}}</h4>
+			                  				<a ng-href="{{item.html_url}}">
+			                  				<img id="avatar" ng-src="{{item.avatar_url}}">
+			                				</a>
+			                		</li>
+			              		</ul>
+			            	</div>
+			            </div>
 					</div>
 
 				</div>
