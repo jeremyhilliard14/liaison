@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="searchApp">
+<head>
+	<title>Liaison GitHub Search</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/searchController.js"></script>
+
+	
+</head>
+<body ng-controller="searchController">
+	<div class="container">
+		<div class="row">
+			<div id="search-page" class="col-sm-8 col-sm-offset-2">
+				<div id="search" class="col-sm-6 col-sm-offset-2 text-center">
+					<h1>Search GitHub Users</h1>
+					<form ng-submit="searchUser();">
+						<input type="text" ng-model="search" placeholder="Enter username">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</form>
+					<div id="results" class="col-sm-6">
+						<div class="col-sm-6" ng-repeat="item in items">
+							
+									<h3>{{item.login}}</h3>
+									<a id="pic" ng-href="{{item.html_url}}"></a>
+									<img ng-src="{{item.avatar_url}}">
+								
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

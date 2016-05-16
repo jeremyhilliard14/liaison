@@ -1,0 +1,11 @@
+{
+  "name": "liaison",
+  "version": "1.0.0",
+  "description": "A simple app built to search github users",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Hilliard",
+  "license": "ISC"
+}
